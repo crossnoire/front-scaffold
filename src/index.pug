@@ -1,13 +1,4 @@
-extends includes/layout.pug
+extends layouts/layout-top.pug
 
-block variables
-  - var top = true
 block content
-  h1 Jade - node template engine
-  #container.col
-    p You are amazing
-    p
-      | Jade is a terse and simple
-      | templating language with a
-      | strong focus on performance
-      | and powerful features.
+  include blocks/block-common-sample.pug

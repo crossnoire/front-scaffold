@@ -1,0 +1,23 @@
+block variables
+- var title = "Title"
+
+doctype html
+html(lang="ja" prefix="og: http://ogp.me/ns#")
+  head
+    title= title
+    include ../blocks/block-tag-head.pug
+
+  body
+    
+    //Header
+    header
+      include ../blocks/block-header.pug
+
+    //Body Content Goes Here
+    main
+      block content
+
+      //Footer
+      include ../blocks/block-footer.pug
+    
+    include ../blocks/block-tag-endbody.pug
