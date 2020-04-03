@@ -4,5 +4,11 @@
     "app/webroot/scss/trumps/*.scss",
     "app/webroot/scss/generics/*.scss",
     "app/webroot/scss/tools/*.scss"
-  ]
+  ],
+  "rules" : {
+     "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "for", "return"]
+    }],
+    "no-descending-specificity": null
+  }
 }

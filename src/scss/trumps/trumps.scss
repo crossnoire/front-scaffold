@@ -1,0 +1,50 @@
+.wp-pagenavi {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .page,
+  .current {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .previouspostslink {
+    position: relative;
+
+    &::before {
+      content: '\25C0';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nextpostslink {
+    position: relative;
+
+    &::before {
+      content: '\25B6';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

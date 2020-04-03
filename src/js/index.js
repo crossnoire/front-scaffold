@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  *This is the main js file
  *all functions will be called here

@@ -1,0 +1,19 @@
+@function get-vw-sp($target-size) {
+  @return ($target-size / $size-sp) * 100 * 1vw;
+}
+
+@function get-vw($target-size) {
+  @return ($target-size / $size-max) * 100 * 1vw;
+}
+
+@function get-em($base-size, $illust-lheight) {
+  @return ($illust-lheight / $base-size) * 1em;
+}
+
+@function get-percent($base-size, $illus-maxwidth) {
+  @return ($base-size / $illus-maxwidth) * 100%;
+}
+
+@function get-pc($target-size) {
+  @return ($size-standard / $size-max) * $target-size * 1;
+}

@@ -1,0 +1,42 @@
+block variables
+- var title = ""
+- if(!top)
+  - title = page_title + '｜Title'
+- else
+  - title = "Title"
+doctype html
+html(lang="ja" prefix="og: http://ogp.me/ns#")
+  head
+    title= title
+
+    //Meta Tags
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=11")
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport", content="width=device-width, shrink-to-fit=yes")
+    meta(name="description" content="Meta Description")
+    meta(property="og:title", content=title)
+
+    //Stylesheet tags
+    link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+    link(href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet")
+    //- uncomment when running npm run dev or npm run build
+      link(rel="stylesheet", href="style.css")
+    
+  body
+    
+    //Header
+    header
+      include header.pug
+
+    //Body Content Goes Here
+    main
+      block content
+
+      //Footer
+      include footer.pug
+    
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8")
+    //- uncomment when running npm run dev or npm run build
+      script(src="main.js")
