@@ -9,16 +9,29 @@ html(lang="ja" prefix="og: http://ogp.me/ns#")
     include ../blocks/block-tag-head.pug
 
   body
-    
+    block below_body
+
     //Header
     header
       include ../blocks/block-header.pug
 
-    //Body Content Goes Here
-    main
-      block content
-
-      //Footer
-      include ../blocks/block-footer.pug
+    .contents__top
     
-    include ../blocks/block-tag-endbody.pug
+    .contents
+      
+      .side_left
+
+      main
+        .main__top
+        block content
+        .main__bottom
+      
+      .side__right
+
+    .contents__top
+    
+    //Footer
+    include ../blocks/block-footer.pug
+    
+    block endbody
+      include ../blocks/block-tag-endbody.pug
